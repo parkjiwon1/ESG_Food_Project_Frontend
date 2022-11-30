@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="152dp"
+            android:fitsSystemWindows="true"
+            app:liftOnScroll="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                app:title="Detect_Area"
+                app:expandedTitleMarginTop="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#aaffaa"
+                android:fitsSystemWindows="true"
+                app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded"
+                app:contentScrim="?attr/colorPrimary"
+
+                app:expandedTitleGravity="center"
+
+
+                app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed"
+                app:expandedTitleTextColor="#000000"
+
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:statusBarScrim="?attr/colorPrimaryVariant">
+
+                <!--                <ImageView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:contentDescription="@string/content_description_media"-->
+                <!--                    android:fitsSystemWindows="true"-->
+                <!--                    android:scaleType="centerCrop"-->
+                <!--                    android:src="@drawable/media2" />-->
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="#aaffcc"
+                    android:elevation="0dp"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="scroll"
+                    app:menu="@menu/toolbar_menu"
+
+
+                    app:navigationIcon="@drawable/menu_24dp"
+                    />
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".MainActivity">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="Put the Picture!"
+                    android:textSize="30sp"
+
+                    app:layout_constraintBottom_toTopOf="@+id/imageView"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="256dp"
+                    android:layout_height="245dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="105dp"
+                    android:layout_marginTop="68dp"
+                    android:layout_marginEnd="105dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/upload"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.509"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/pic_btn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageView"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="20dp"
+                    android:letterSpacing="0.3"
+                    android:text="사진 찍기"
+                    android:backgroundTint="#009688"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                <Button
+                    android:id="@+id/bringBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:text="사진가져오기"
+                    android:backgroundTint="#009688"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView"></Button>
+
+                <Button
+                    android:id="@+id/go_btn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="140dp"
+                    android:text="전송"
+                    android:textSize="20sp"
+                    android:backgroundTint="#009688"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

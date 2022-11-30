@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "291431907332",
+    "project_id": "esg-project-6df26",
+    "storage_bucket": "esg-project-6df26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291431907332:android:5b46055339f5981d5bf551",
+        "android_client_info": {
+          "package_name": "com.yohan.esg_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "291431907332-sengbl59b9sk1cn9iso0rkgo8mjspipn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqotI3GIk7kb4QtJvRvfVVGUY1rseJ6Yc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "291431907332-sengbl59b9sk1cn9iso0rkgo8mjspipn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

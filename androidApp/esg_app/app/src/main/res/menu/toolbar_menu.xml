@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_24dp"
+        android:title="검색"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/reload"
+        android:enabled="true"
+        android:icon="@drawable/ic_refresh_24dp"
+        android:title="즐겨찾기"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/information"
+        android:enabled="true"
+        android:title="서버설정"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/logout"
+        android:enabled="true"
+        android:title="로그아웃"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/fragment1_main">
+
+
+    <fragment
+        android:id="@+id/fragment1_main"
+        android:name="com.yohan.esg_app.Fragment1_main"
+        android:label="fragment_fragment1_main"
+        tools:layout="@layout/fragment_fragment1_main" >
+        <action
+            android:id="@+id/action_fragment1_main_to_fragment2_main"
+            app:destination="@id/fragment2_main" />
+        <action
+            android:id="@+id/action_fragment1_main_to_fragment3_main"
+            app:destination="@id/fragment3_main" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment2_main"
+        android:name="com.yohan.esg_app.Fragment2_main"
+        android:label="fragment_fragment2_main"
+        tools:layout="@layout/fragment_fragment2_main" >
+        <action
+            android:id="@+id/action_fragment2_main_to_fragment1_main"
+            app:destination="@id/fragment1_main" />
+        <action
+            android:id="@+id/action_fragment2_main_to_fragment3_main"
+            app:destination="@id/fragment3_main" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment3_main"
+        android:name="com.yohan.esg_app.Fragment3_main"
+        android:label="fragment_fragment3_main"
+        tools:layout="@layout/fragment_fragment3_main" >
+        <action
+            android:id="@+id/action_fragment3_main_to_fragment1_main"
+            app:destination="@id/fragment1_main" />
+        <action
+            android:id="@+id/action_fragment3_main_to_fragment2_main"
+            app:destination="@id/fragment2_main" />
+    </fragment>
+</navigation>
